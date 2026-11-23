@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="planli-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5797ff" />
+      <stop offset="100%" stop-color="#315fe2" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="38" fill="url(#planli-grad)" />
+  <text x="64" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Manrope', 'Helvetica Neue', Arial, sans-serif" font-size="76" font-weight="900" fill="#ffffff" text-anchor="middle">P</text>
+</svg>
