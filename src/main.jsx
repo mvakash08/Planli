@@ -54,7 +54,7 @@ const WEEK = [
 ];
 const today = () => {
   const d = new Date();
-  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 };
 const fmtDate = value => value ? new Date(`${value}T12:00:00`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
 const fmtHours = mins => `${Math.floor(mins / 60)}h ${mins % 60}m`;
@@ -79,7 +79,7 @@ function buildStaticSchedule({ questions, startDate, availability, pausedDates =
   const DAY_KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
   function dKey(d) {
-    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
   }
   function addD(str, n) {
     const d = new Date(`${str}T12:00:00`);
@@ -210,7 +210,7 @@ function getRecaptchaVerifier() {
   try {
     window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
       size: 'invisible',
-      callback: () => {},
+      callback: () => { },
       'expired-callback': () => {
         resetRecaptcha();
       }
@@ -327,43 +327,106 @@ function AuthScreen({ onAuth }) {
     setLoading(false);
   }
 
-  // 3. Mobile Phone OTP: Send SMS
+  // 3. Mobile Phone OTP: Send SMS via Fast2SMS Backend (with Firebase fallback)
   async function handleSendPhoneOtp(e) {
     if (e && e.preventDefault) e.preventDefault();
     setError('');
-    const cleanPhone = phone.trim().replace(/[^0-9]/g, '');
-    if (!cleanPhone || cleanPhone.length < 10) {
+    const cleanPhone = phone.trim().replace(/[^0-9]/g, '').slice(-10);
+    if (!cleanPhone || cleanPhone.length !== 10) {
       setError('Please enter a valid 10-digit mobile number.');
       return;
     }
     setLoading(true);
     try {
-      const fullPhone = `${countryCode.trim()}${cleanPhone.slice(-10)}`;
-      const verifier = getRecaptchaVerifier();
-      const confirmation = await signInWithPhoneNumber(auth, fullPhone, verifier);
-      setConfirmationResult(confirmation);
-      setOtpSent(true);
+      // 1. Try Fast2SMS Backend endpoint
+      const res = await fetch('/api/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone: cleanPhone })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
+        setOtpSent(true);
+      } else if (data.error && !res.ok) {
+        // Fallback to Firebase Phone Auth if backend requires configuration or isn't hosted
+        const fullPhone = `${countryCode.trim()}${cleanPhone}`;
+        const verifier = getRecaptchaVerifier();
+        const confirmation = await signInWithPhoneNumber(auth, fullPhone, verifier);
+        setConfirmationResult(confirmation);
+        setOtpSent(true);
+      } else {
+        const fullPhone = `${countryCode.trim()}${cleanPhone}`;
+        const verifier = getRecaptchaVerifier();
+        const confirmation = await signInWithPhoneNumber(auth, fullPhone, verifier);
+        setConfirmationResult(confirmation);
+        setOtpSent(true);
+      }
     } catch (err) {
-      resetRecaptcha();
-      handleError(err);
+      try {
+        const fullPhone = `${countryCode.trim()}${cleanPhone}`;
+        const verifier = getRecaptchaVerifier();
+        const confirmation = await signInWithPhoneNumber(auth, fullPhone, verifier);
+        setConfirmationResult(confirmation);
+        setOtpSent(true);
+      } catch (fbErr) {
+        resetRecaptcha();
+        handleError(fbErr);
+      }
     }
     setLoading(false);
   }
 
-  // 3. Mobile Phone OTP: Verify code
+  // 3. Mobile Phone OTP: Verify code via Fast2SMS Backend or Firebase
   async function handleVerifyPhoneOtp(e) {
     if (e && e.preventDefault) e.preventDefault();
     setError('');
+    const cleanPhone = phone.trim().replace(/[^0-9]/g, '').slice(-10);
     const code = otpCode.trim();
-    if (!code || code.length < 6) {
+    if (!code || code.length < 4) {
       setError('Please enter the 6-digit OTP code.');
       return;
     }
     setLoading(true);
     try {
-      const res = await confirmationResult.confirm(code);
-      resetRecaptcha();
-      onAuth(res.user);
+      // 1. If confirmationResult is from Firebase:
+      if (confirmationResult && confirmationResult.confirm) {
+        const res = await confirmationResult.confirm(code);
+        resetRecaptcha();
+        onAuth(res.user);
+        setLoading(false);
+        return;
+      }
+
+      // 2. Verify through Fast2SMS backend
+      const res = await fetch('/api/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone: cleanPhone, otp: code })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.verified) {
+        // Sign in or register seamlessly into Firebase using verified phone identity
+        const phoneEmail = `phone_${cleanPhone}@planli.app`;
+        const phoneSecret = `planli_phone_${cleanPhone}_sec`;
+        try {
+          const cred = await signInWithEmailAndPassword(auth, phoneEmail, phoneSecret);
+          onAuth(cred.user);
+        } catch (loginErr) {
+          if (loginErr.code === 'auth/user-not-found' || loginErr.code === 'auth/invalid-credential') {
+            const cred = await createUserWithEmailAndPassword(auth, phoneEmail, phoneSecret);
+            await updateProfile(cred.user, { displayName: `User ${cleanPhone.slice(-4)}` });
+            onAuth(cred.user);
+          } else {
+            throw loginErr;
+          }
+        }
+      } else {
+        setError(data.error || 'Incorrect or expired OTP. Please check and try again.');
+      }
     } catch (err) {
       handleError(err);
     }
@@ -441,8 +504,8 @@ function AuthScreen({ onAuth }) {
                 {loading
                   ? 'Please wait…'
                   : view === 'login'
-                  ? 'Sign In →'
-                  : 'Create Account & Start →'}
+                    ? 'Sign In →'
+                    : 'Create Account & Start →'}
               </button>
             </form>
 
@@ -485,10 +548,10 @@ function AuthScreen({ onAuth }) {
                 disabled={loading}
               >
                 <svg width="17" height="17" viewBox="0 0 24 24">
-                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
                 </svg>
                 <span>Google</span>
               </button>
@@ -1075,8 +1138,8 @@ function App() {
   // Filter sprint days by search
   const filteredCurrentDays = currentSprint
     ? currentSprint.days.filter(day =>
-        !search || day.questions.some(q => q.title.toLowerCase().includes(search.toLowerCase())) || day.isPaused || day.isRestDay
-      )
+      !search || day.questions.some(q => q.title.toLowerCase().includes(search.toLowerCase())) || day.isPaused || day.isRestDay
+    )
     : [];
 
   // For the preview modal delta
@@ -1500,7 +1563,7 @@ function App() {
               <div><b>✓ Started work is protected</b><small>Completed items and their history stay unchanged.</small></div>
             </div>
             <div className="sprint-change-list">{Array.from({ length: Math.max(staticSchedule.sprints.length, draftSchedule.sprints.length) }, (_, i) => (
-              <div key={i}><span>Sprint {i+1}</span><b>{i < draftSchedule.sprints.length ? (i < staticSchedule.sprints.length ? 'Rescheduled' : 'New sprint') : 'Removed · tasks regrouped'}</b></div>
+              <div key={i}><span>Sprint {i + 1}</span><b>{i < draftSchedule.sprints.length ? (i < staticSchedule.sprints.length ? 'Rescheduled' : 'New sprint') : 'Removed · tasks regrouped'}</b></div>
             ))}</div>
             <div className="remaining-row"><span>Remaining items</span><b>{remainingQuestions} → {remainingQuestions}</b></div>
           </div>
@@ -1534,7 +1597,7 @@ function SprintSummaryRow({ sprint, plan, isCurrent, isCompleted, onClick }) {
     </div>
     <div className="ssrow-right">
       <span>{doneTasks}/{sprint.questionCount} done</span>
-      <div className="ssrow-bar"><div className="ssrow-fill" style={{ width: `${pct}%` }}/></div>
+      <div className="ssrow-bar"><div className="ssrow-fill" style={{ width: `${pct}%` }} /></div>
       <span className="ssrow-pct">{pct}%</span>
       {isCurrent && <span className="ssrow-badge current-badge">Current</span>}
       {isCompleted && <span className="ssrow-badge done-badge">Done</span>}
@@ -1554,7 +1617,7 @@ function TaskRow({ question, completed, revision, noteOpen, onComplete, onRevisi
     <div className={`task-wrap ${completed ? 'task-complete' : ''}`}>
       <div className="task-row">
         <label className="check-wrap">
-          <input type="checkbox" checked={completed} onChange={onComplete}/>
+          <input type="checkbox" checked={completed} onChange={onComplete} />
           <span className="custom-check">✓</span>
         </label>
         <div className="task-info">
@@ -1574,7 +1637,7 @@ function TaskRow({ question, completed, revision, noteOpen, onComplete, onRevisi
       </div>
       {noteOpen && (
         <div className="note-editor">
-          <textarea value={draft} onChange={e => setDraft(e.target.value)} placeholder="Write your approach, mistakes, complexity, or revision notes…"/>
+          <textarea value={draft} onChange={e => setDraft(e.target.value)} placeholder="Write your approach, mistakes, complexity, or revision notes…" />
           <button className="button secondary small" onClick={() => onSaveNote(draft)}>Save note</button>
         </div>
       )}
@@ -1582,4 +1645,4 @@ function TaskRow({ question, completed, revision, noteOpen, onComplete, onRevisi
   );
 }
 
-createRoot(document.getElementById('root')).render(<App/>);
+createRoot(document.getElementById('root')).render(<App />);
