@@ -232,8 +232,6 @@ function AuthScreen({ onAuth }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [unauthDomain, setUnauthDomain] = useState(false);
-  const [phoneBlocked, setPhoneBlocked] = useState(false);
 
   // Mobile phone OTP state
   const [countryCode, setCountryCode] = useState('+91');
@@ -243,45 +241,52 @@ function AuthScreen({ onAuth }) {
   const [otpSent, setOtpSent] = useState(false);
 
   function handleError(err) {
-    if (err.code === 'auth/unauthorized-domain') {
-      setUnauthDomain(true);
-      setError(`Domain "${window.location.hostname}" is not yet authorized in Firebase.`);
-      return;
-    }
-    if (err.code === 'auth/operation-not-allowed') {
-      setPhoneBlocked(true);
-      setError('Firebase blocked sending SMS to this number. See the step-by-step resolution guide below.');
-      return;
-    }
+    if (!err) return;
+
     if (err.message && err.message.includes('reCAPTCHA has already been rendered')) {
       resetRecaptcha();
-      setError('Verification widget reloaded. Please tap "Send Mobile OTP" again.');
+      setError('Verification session refreshed. Please tap Send Mobile OTP again.');
       return;
     }
+
     const msgs = {
       'auth/popup-closed-by-user': '',
+      'auth/cancelled-popup-request': '',
+      // Phone / SMS errors -> Clean, graceful user-facing fallback
+      'auth/billing-not-enabled': 'Mobile OTP service is currently unavailable. Please sign in with Google or Username & Password.',
+      'auth/operation-not-allowed': 'Mobile OTP service is currently unavailable. Please sign in with Google or Username & Password.',
+      'auth/quota-exceeded': 'SMS service limit reached. Please sign in with Google or Username & Password.',
+      'auth/too-many-requests': 'Too many attempts. Please try again later or sign in with Google / Password.',
+      'auth/captcha-check-failed': 'Security verification failed. Please try again or sign in with Google.',
+      'auth/invalid-phone-number': 'Please enter a valid 10-digit mobile number.',
+      'auth/invalid-verification-code': 'Incorrect OTP code. Please check and try again.',
+      'auth/code-expired': 'This OTP code has expired. Please request a new one.',
+      // Standard credentials & domain
+      'auth/unauthorized-domain': 'Google sign-in is not configured for this domain. Please sign in with Username & Password.',
       'auth/email-already-in-use': 'This username or email is already registered. Try signing in.',
       'auth/invalid-email': 'Please enter a valid username or email address.',
       'auth/weak-password': 'Password must be at least 6 characters.',
       'auth/user-not-found': 'No account found with this username/email. Create an account first.',
       'auth/wrong-password': 'Incorrect password. Please try again.',
       'auth/invalid-credential': 'Incorrect username, email, or password.',
-      'auth/too-many-requests': 'Too many attempts. Please wait a moment.',
-      'auth/quota-exceeded': 'SMS quota reached or phone provider blocked. You can configure a test phone number in Firebase Console or sign in with Google / Email.',
-      'auth/captcha-check-failed': 'reCAPTCHA verification failed. Please try again.',
-      'auth/network-request-failed': 'Network error. Check your internet connection.',
-      'auth/invalid-phone-number': 'Please enter a valid 10-digit mobile number.',
-      'auth/invalid-verification-code': 'Incorrect OTP code. Please check your SMS.',
-      'auth/code-expired': 'This OTP code has expired. Please request a new one.'
+      'auth/network-request-failed': 'Network error. Please check your internet connection.'
     };
-    setError(msgs[err.code] !== undefined ? msgs[err.code] : (err.message || 'Authentication error.'));
+
+    if (msgs[err.code] !== undefined) {
+      setError(msgs[err.code]);
+    } else {
+      if (view === 'phone') {
+        setError('Mobile OTP service is currently unavailable. Please sign in with Google or Username & Password.');
+      } else {
+        setError('Authentication error. Please check your credentials and try again.');
+      }
+    }
   }
 
   // 1. Username / Email + Password Login or Register
   async function handleCredentialsSubmit(e) {
     e.preventDefault();
     setError('');
-    setUnauthDomain(false);
     if (!usernameOrEmail.trim()) {
       setError('Please enter your username or email.');
       return;
@@ -312,7 +317,6 @@ function AuthScreen({ onAuth }) {
   // 2. Google Sign-In
   async function handleGoogleSignIn() {
     setError('');
-    setUnauthDomain(false);
     setLoading(true);
     try {
       const res = await signInWithPopup(auth, googleProvider);
@@ -327,8 +331,6 @@ function AuthScreen({ onAuth }) {
   async function handleSendPhoneOtp(e) {
     if (e && e.preventDefault) e.preventDefault();
     setError('');
-    setUnauthDomain(false);
-    setPhoneBlocked(false);
     const cleanPhone = phone.trim().replace(/[^0-9]/g, '');
     if (!cleanPhone || cleanPhone.length < 10) {
       setError('Please enter a valid 10-digit mobile number.');
@@ -594,74 +596,14 @@ function AuthScreen({ onAuth }) {
               </form>
             )}
 
-            {phoneBlocked && (
-              <div className="auth-guide-box" style={{ marginTop: 16 }}>
-                <b>📱 How to enable SMS for your number in Firebase:</b>
-                <p style={{ marginTop: 6, fontSize: '0.84rem' }}>
-                  Even though Phone provider is turned ON, Google Firebase requires one of the following two quick steps:
-                </p>
-
-                <div style={{ marginTop: 10, padding: 10, background: 'rgba(59, 130, 246, 0.08)', borderRadius: 8 }}>
-                  <b style={{ color: '#60a5fa' }}>Option A: Instant Free Test Number (No Billing Required)</b>
-                  <ol style={{ margin: '6px 0 0 16px', padding: 0, fontSize: '0.82rem', lineHeight: 1.5 }}>
-                    <li>Open <a href="https://console.firebase.google.com/project/planli-39e77/authentication/providers" target="_blank" rel="noreferrer">Firebase Console → Authentication → Sign-in method</a></li>
-                    <li>Click on the <b>Phone</b> row to edit it.</li>
-                    <li>Scroll down and expand <b>Phone numbers for testing (optional)</b>.</li>
-                    <li>Add <code>+91 8688608826</code> with code <code>123456</code> and click <b>Save</b>.</li>
-                    <li>You can now type your number, click Send, and sign in immediately with code <code>123456</code>!</li>
-                  </ol>
-                </div>
-
-                <div style={{ marginTop: 10, padding: 10, background: 'rgba(255, 255, 255, 0.04)', borderRadius: 8 }}>
-                  <b>Option B: Send Real SMS to Any Phone Number</b>
-                  <ol style={{ margin: '6px 0 0 16px', padding: 0, fontSize: '0.82rem', lineHeight: 1.5 }}>
-                    <li>Go to <a href="https://console.firebase.google.com/project/planli-39e77/authentication/settings" target="_blank" rel="noreferrer">Authentication → Settings → SMS Region Policy</a>.</li>
-                    <li>Set to <b>Allow</b> and ensure <b>India (+91)</b> is selected.</li>
-                    <li>Note: Google Firebase requires a billing account (Blaze plan) to send real carrier SMS internationally.</li>
-                  </ol>
-                </div>
-              </div>
-            )}
-
             <p className="auth-hint" style={{ marginTop: 20 }}>
               <button
                 type="button"
                 className="auth-link"
-                onClick={() => { setView('login'); setError(''); setOtpSent(false); setPhoneBlocked(false); resetRecaptcha(); }}
+                onClick={() => { setView('login'); setError(''); setOtpSent(false); resetRecaptcha(); }}
               >
                 ← Back to username &amp; password
               </button>
-            </p>
-          </div>
-        )}
-
-        {/* ── ACTIONABLE STEP-BY-STEP BOX FOR UNAUTHORIZED DOMAIN ─────────── */}
-        {unauthDomain && (
-          <div className="auth-guide-box">
-            <b>⚠️ Domain authorization required in Firebase:</b>
-            <p>
-              Firebase security blocked sign-in on <code>{window.location.hostname}</code> because it needs to be added to Authorized Domains.
-            </p>
-            <ol>
-              <li>
-                Open{' '}
-                <a
-                  href="https://console.firebase.google.com/project/planli-39e77/authentication/settings"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Firebase Console → Authentication → Settings
-                </a>
-              </li>
-              <li>Under <b>Authorized domains</b>, click <b>Add domain</b>.</li>
-              <li>Type <code>{window.location.hostname}</code> and click <b>Done</b>.</li>
-            </ol>
-            <p className="auth-guide-tip">
-              💡 <b>Immediate option:</b> You can also use{' '}
-              <a href="https://planli-39e77.web.app" style={{ color: '#7db8ff', fontWeight: 'bold' }}>
-                https://planli-39e77.web.app
-              </a>{' '}
-              which is already authorized by default!
             </p>
           </div>
         )}
