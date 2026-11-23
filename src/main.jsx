@@ -403,7 +403,7 @@ function AuthScreen({ onAuth }) {
                     type="text"
                     value={name}
                     onChange={e => setName(e.target.value)}
-                    placeholder="e.g. Akash"
+                    placeholder="Enter your name"
                     autoComplete="name"
                     required
                   />
@@ -416,7 +416,7 @@ function AuthScreen({ onAuth }) {
                   type="text"
                   value={usernameOrEmail}
                   onChange={e => setUsernameOrEmail(e.target.value)}
-                  placeholder="e.g. akash or you@email.com"
+                  placeholder="your_username or you@email.com"
                   autoComplete="username"
                   autoFocus
                   required
@@ -538,7 +538,7 @@ function AuthScreen({ onAuth }) {
                       className="phone-number-input"
                       value={phone}
                       onChange={e => setPhone(e.target.value)}
-                      placeholder="e.g. 9876543210"
+                      placeholder="10-digit mobile number"
                       autoComplete="tel"
                       autoFocus
                       required
