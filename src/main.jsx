@@ -25,7 +25,7 @@ const SHEETS = {
     id: 'striver180',
     name: "Striver 180",
     fullName: "Striver's 180 – Master DSA Patterns",
-    shortBadge: "⚡ Striver 180",
+    shortBadge: "Striver 180",
     tag: "179 Questions",
     badgeColor: "blue",
     data: striver180Data,
@@ -35,7 +35,7 @@ const SHEETS = {
     id: 'striverA2Z',
     name: "Striver A-Z",
     fullName: "Striver's A-Z DSA Course",
-    shortBadge: "📚 Striver A-Z",
+    shortBadge: "Striver A-Z",
     tag: "496 Topics",
     badgeColor: "green",
     data: striverA2ZData,
@@ -684,6 +684,9 @@ function App() {
   const [user, setUser] = useState(undefined); // undefined = checking, null = not signed in
   const [plans, setPlans] = useState([]);
   const [activeId, setActiveId] = useState(null);
+  const [workspaceTab, setWorkspaceTab] = useState('plans'); // 'plans' | 'revision'
+  const [revisionSearch, setRevisionSearch] = useState('');
+  const [revisionFilter, setRevisionFilter] = useState('all'); // 'all' | 'pending' | 'completed'
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   const [currentSprintIdx, setCurrentSprintIdx] = useState(0);
@@ -725,8 +728,17 @@ function App() {
   // ── Load plans from Firestore when user is known ──────────────────────────
   useEffect(() => {
     if (!user) return;
+    let cancelled = false;
     setLoading(true);
+    const timeoutId = window.setTimeout(() => {
+      if (!cancelled) {
+        setLoading(false);
+        setToast('Connection slow or blocked. Check network or browser shields if plans did not load.');
+      }
+    }, 10000);
+
     getAllPlans(user.uid).then(saved => {
+      if (cancelled) return;
       if (!saved.length) {
         setPlans([]);
         setActiveId(null);
@@ -740,8 +752,15 @@ function App() {
         setActiveId(saved[0].id);
       }
     }).catch(err => {
-      setToast(`Load error: ${err.message}`);
-    }).finally(() => setLoading(false));
+      if (!cancelled) setToast(`Load error: ${err.message}`);
+    }).finally(() => {
+      window.clearTimeout(timeoutId);
+      if (!cancelled) setLoading(false);
+    });
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timeoutId);
+    };
   }, [user]);
 
   const active = plans.find(p => p.id === activeId);
@@ -791,9 +810,35 @@ function App() {
     });
   }, [active, showPreview, draftAvailability, draftPauseDates, draftStartDate, activeQuestions]);
 
+  // Revision list items computed unconditionally before any early returns (Rules of Hooks)
+  const revisionIdSet = useMemo(() => new Set(active?.revisionTaskIds || []), [active?.revisionTaskIds]);
+  const revisionQuestions = useMemo(() => {
+    return activeQuestions
+      .filter(q => revisionIdSet.has(q.taskId))
+      .sort((a, b) => a.sequence - b.sequence);
+  }, [activeQuestions, revisionIdSet]);
+
+  const filteredRevisionQuestions = useMemo(() => {
+    const qLower = revisionSearch.trim().toLowerCase();
+    return revisionQuestions.filter(q => {
+      const isDone = active?.completedTaskIds?.includes(q.taskId);
+      if (revisionFilter === 'pending' && isDone) return false;
+      if (revisionFilter === 'completed' && !isDone) return false;
+      if (qLower && !q.title.toLowerCase().includes(qLower)) return false;
+      return true;
+    });
+  }, [revisionQuestions, revisionFilter, revisionSearch, active?.completedTaskIds]);
+
+  const revisionCount = revisionQuestions.length;
+  const revisionDoneCount = revisionQuestions.filter(q => active?.completedTaskIds?.includes(q.taskId)).length;
+
   async function persist(next) {
-    await savePlan(user.uid, next);
     setPlans(prev => prev.map(p => p.id === next.id ? next : p));
+    try {
+      await savePlan(user.uid, next);
+    } catch (err) {
+      notify(`Sync error: ${err.message}`);
+    }
   }
   function notify(message) {
     setToast(message);
@@ -807,21 +852,41 @@ function App() {
     setShowAdjust(true);
   }
   function toggleComplete(taskId) {
-    const list = active.completedTaskIds.includes(taskId)
-      ? active.completedTaskIds.filter(id => id !== taskId)
-      : [...active.completedTaskIds, taskId];
-    persist({ ...active, completedTaskIds: list });
+    setPlans(prev => {
+      const current = prev.find(p => p.id === activeId);
+      if (!current) return prev;
+      const done = current.completedTaskIds || [];
+      const list = done.includes(taskId)
+        ? done.filter(id => id !== taskId)
+        : [...done, taskId];
+      const next = { ...current, completedTaskIds: list };
+      savePlan(user.uid, next).catch(err => notify(`Sync error: ${err.message}`));
+      return prev.map(p => p.id === next.id ? next : p);
+    });
   }
   function toggleRevision(taskId) {
-    const list = active.revisionTaskIds?.includes(taskId)
-      ? active.revisionTaskIds.filter(id => id !== taskId)
-      : [...(active.revisionTaskIds || []), taskId];
-    persist({ ...active, revisionTaskIds: list });
-    notify(list.includes(taskId) ? 'Added to revision' : 'Removed from revision');
+    const currentlyStarred = Boolean(active?.revisionTaskIds?.includes(taskId));
+    setPlans(prev => {
+      const current = prev.find(p => p.id === activeId);
+      if (!current) return prev;
+      const rev = current.revisionTaskIds || [];
+      const exists = rev.includes(taskId);
+      const list = exists ? rev.filter(id => id !== taskId) : [...rev, taskId];
+      const next = { ...current, revisionTaskIds: list };
+      savePlan(user.uid, next).catch(err => notify(`Sync error: ${err.message}`));
+      return prev.map(p => p.id === next.id ? next : p);
+    });
+    notify(!currentlyStarred ? 'Added to revision list ★' : 'Removed from revision list');
   }
   function saveNote(taskId, text) {
-    const notes = { ...(active.notes || {}), [taskId]: text };
-    persist({ ...active, notes });
+    setPlans(prev => {
+      const current = prev.find(p => p.id === activeId);
+      if (!current) return prev;
+      const notes = { ...(current.notes || {}), [taskId]: text };
+      const next = { ...current, notes };
+      savePlan(user.uid, next).catch(err => notify(`Sync error: ${err.message}`));
+      return prev.map(p => p.id === next.id ? next : p);
+    });
     notify('Note saved');
   }
   async function applyAdjustment() {
@@ -922,7 +987,15 @@ function App() {
     return <AuthScreen onAuth={u => setUser(u)} />;
   }
 
-  if (loading) return <div className="loading-screen"><div className="brand-mark">P</div><p>Preparing your study space…</p></div>;
+  if (loading) {
+    return (
+      <div className="loading-screen welcome-screen">
+        <div className="brand-mark">P</div>
+        <p>Preparing your study space…</p>
+        {toast && <p style={{ fontSize: 11, color: '#ff9090', marginTop: 8 }}>{toast}</p>}
+      </div>
+    );
+  }
 
   // New Plan Modal renderer with 2 sheet options
   const renderNewPlanModal = () => (
@@ -960,8 +1033,8 @@ function App() {
               <h3 className="sheet-card-title">Striver 180 Sheet</h3>
               <p className="sheet-card-sub">Master DSA Patterns · SDE Core Prep</p>
               <div className="sheet-card-pill-row">
-                <span className="sheet-mini-tag">⏱ ~65 hrs</span>
-                <span className="sheet-mini-tag">🎯 Interviews</span>
+                <span className="sheet-mini-tag">~65 hrs est.</span>
+                <span className="sheet-mini-tag">Core Interview Track</span>
               </div>
             </button>
 
@@ -980,14 +1053,14 @@ function App() {
                   {newPlanSheetType === 'striverA2Z' && <span className="sheet-radio-dot" />}
                 </div>
                 <div className="sheet-count-box badge-green">
-                  496 Questions &amp; Topics
+                  496 Topics
                 </div>
               </div>
               <h3 className="sheet-card-title">Striver A-Z Sheet</h3>
-              <p className="sheet-card-sub">Complete DSA Roadmap · Zero to Hero</p>
+              <p className="sheet-card-sub">Complete DSA Roadmap · Fundamentals to Hard</p>
               <div className="sheet-card-pill-row">
-                <span className="sheet-mini-tag">⏱ ~192 hrs</span>
-                <span className="sheet-mini-tag">🚀 From Scratch</span>
+                <span className="sheet-mini-tag">~192 hrs est.</span>
+                <span className="sheet-mini-tag">Full DSA Track</span>
               </div>
             </button>
           </div>
@@ -1110,7 +1183,8 @@ function App() {
     return <div className="loading-screen">Unable to load your plan. Refresh or import a backup.</div>;
   }
 
-  const completedCount = active.completedTaskIds.length;
+  const activeCompletedIds = active.completedTaskIds || [];
+  const completedCount = activeCompletedIds.length;
   const totalQuestionsCount = activeQuestions.length;
   const progress = Math.round(completedCount / totalQuestionsCount * 100);
   const remainingQuestions = totalQuestionsCount - completedCount;
@@ -1127,12 +1201,12 @@ function App() {
   const todayDay = staticSchedule.days.find(d => d.date === todayStr);
   const todayTotalTasks = todayDay?.questions.length || 0;
   const todayDoneTasks = todayDay
-    ? todayDay.questions.filter(q => active.completedTaskIds.includes(q.taskId)).length
+    ? todayDay.questions.filter(q => activeCompletedIds.includes(q.taskId)).length
     : 0;
   const dailyProgress = todayTotalTasks > 0 ? Math.round(todayDoneTasks / todayTotalTasks * 100) : 0;
   const todayCommittedMins = todayDay?.capacityMinutes || 0;
   const todaySpentMins = todayDay
-    ? todayDay.questions.filter(q => active.completedTaskIds.includes(q.taskId)).reduce((s, q) => s + q.estimatedMinutes, 0)
+    ? todayDay.questions.filter(q => activeCompletedIds.includes(q.taskId)).reduce((s, q) => s + q.estimatedMinutes, 0)
     : 0;
 
   // Filter sprint days by search
@@ -1156,7 +1230,21 @@ function App() {
     <aside className="sidebar">
       <div className="brand"><div className="brand-mark">P</div><div><b>Planli</b><small>YOUR STUDY SPACE</small></div></div>
       <div className="side-heading">WORKSPACE</div>
-      <button className="nav-item active"><span>▦</span> My plans</button>
+      <button
+        className={`nav-item ${workspaceTab === 'plans' ? 'active' : ''}`}
+        onClick={() => setWorkspaceTab('plans')}
+      >
+        <span>▦</span>
+        <span>My plans</span>
+      </button>
+      <button
+        className={`nav-item ${workspaceTab === 'revision' ? 'active' : ''}`}
+        onClick={() => setWorkspaceTab('revision')}
+      >
+        <span style={{ color: workspaceTab === 'revision' || revisionCount > 0 ? '#ffca70' : undefined }}>★</span>
+        <span>Revision list</span>
+        {revisionCount > 0 && <span className="nav-badge">{revisionCount}</span>}
+      </button>
       <div className="side-heading plan-heading">YOUR PLANS <span>{plans.length}</span></div>
 
       {/* Plan list with individual delete buttons & sheet badges */}
@@ -1176,11 +1264,19 @@ function App() {
                 </span>
               </button>
               <button
+                type="button"
                 className="plan-trash-btn"
-                title="Delete plan"
+                title={`Delete ${p.name}`}
+                aria-label={`Delete ${p.name}`}
                 onClick={() => setPlanToDelete(p)}
               >
-                🗑
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polyline points="3 6 5 6 21 6" />
+                  <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                  <path d="M10 11v6" />
+                  <path d="M14 11v6" />
+                  <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+                </svg>
               </button>
             </div>
           );
@@ -1201,7 +1297,118 @@ function App() {
     </aside>
 
     <main className="main-content">
-      <div className="topbar">
+      {/* Mobile-only tab bar so Revision List is always reachable on phones */}
+      <div className="mobile-tab-bar">
+        <button
+          className={`button small ${workspaceTab === 'plans' ? 'primary' : 'secondary'}`}
+          onClick={() => setWorkspaceTab('plans')}
+        >
+          ▦ My plans
+        </button>
+        <button
+          className={`button small ${workspaceTab === 'revision' ? 'primary' : 'secondary'}`}
+          onClick={() => setWorkspaceTab('revision')}
+        >
+          ★ Revision list ({revisionCount})
+        </button>
+      </div>
+
+      {workspaceTab === 'revision' ? (
+        <div className="revision-view">
+          <div className="topbar">
+            <div>
+              <div className="eyebrow">
+                <span className={`sheet-pill ${activeSheet.badgeColor === 'green' ? 'pill-green' : 'pill-blue'}`}>
+                  {activeSheet.shortBadge}
+                </span>
+                <span>·</span>
+                REVISION LIST
+                <span>·</span>
+                {active.name}
+              </div>
+              <h1>Starred Questions</h1>
+              <p>
+                {revisionCount} saved for revision · {revisionDoneCount} completed · Click ★ to unstar
+              </p>
+            </div>
+            <div className="top-actions">
+              <button className="button secondary" onClick={() => setWorkspaceTab('plans')}>
+                ← Back to My plans
+              </button>
+            </div>
+          </div>
+
+          <div className="revision-panel">
+            <div className="revision-toolbar">
+              <div className="search-box" style={{ width: 'min(280px, 100%)' }}>
+                <span>🔍</span>
+                <input
+                  value={revisionSearch}
+                  onChange={e => setRevisionSearch(e.target.value)}
+                  placeholder="Search starred questions…"
+                />
+              </div>
+              <div className="revision-filters">
+                <button
+                  className={`preset-chip ${revisionFilter === 'all' ? 'active-chip' : ''}`}
+                  onClick={() => setRevisionFilter('all')}
+                >
+                  All ({revisionCount})
+                </button>
+                <button
+                  className={`preset-chip ${revisionFilter === 'pending' ? 'active-chip' : ''}`}
+                  onClick={() => setRevisionFilter('pending')}
+                >
+                  Pending ({revisionCount - revisionDoneCount})
+                </button>
+                <button
+                  className={`preset-chip ${revisionFilter === 'completed' ? 'active-chip' : ''}`}
+                  onClick={() => setRevisionFilter('completed')}
+                >
+                  Completed ({revisionDoneCount})
+                </button>
+              </div>
+            </div>
+
+            <div className="revision-list-body">
+              {revisionCount === 0 ? (
+                <div className="revision-empty">
+                  <div className="revision-empty-star">☆</div>
+                  <b>No questions starred yet</b>
+                  <p>
+                    Click the <b>☆</b> star icon beside any question in your sprint schedule to add it here for quick revision.
+                  </p>
+                  <button className="button primary small" onClick={() => setWorkspaceTab('plans')}>
+                    Go to Sprint Schedule →
+                  </button>
+                </div>
+              ) : filteredRevisionQuestions.length === 0 ? (
+                <div className="revision-empty">
+                  <b>No matching starred questions</b>
+                  <p>Try clearing your search or switching the filter above.</p>
+                </div>
+              ) : (
+                filteredRevisionQuestions.map(q => (
+                  <TaskRow
+                    key={q.taskId}
+                    question={q}
+                    completed={active.completedTaskIds.includes(q.taskId)}
+                    revision={revisionIdSet.has(q.taskId)}
+                    noteOpen={noteTaskId === q.taskId}
+                    onComplete={() => toggleComplete(q.taskId)}
+                    onRevision={() => toggleRevision(q.taskId)}
+                    onNoteToggle={() => setNoteTaskId(prev => prev === q.taskId ? null : q.taskId)}
+                    onSaveNote={note => saveNote(q.taskId, note)}
+                    plan={active}
+                  />
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="topbar">
         <div>
           <div className="eyebrow">
             <span className={`sheet-pill ${activeSheet.badgeColor === 'green' ? 'pill-green' : 'pill-blue'}`}>
@@ -1391,6 +1598,8 @@ function App() {
           })}
         </div>
       </div>
+        </>
+      )}
     </main>
 
     {/* Sprint drawer (all sprints) */}
@@ -1605,13 +1814,67 @@ function SprintSummaryRow({ sprint, plan, isCurrent, isCompleted, onClick }) {
   </button>;
 }
 
+function YouTubeIcon() {
+  return (
+    <svg width="20" height="14" viewBox="0 0 24 17" fill="none" aria-hidden="true">
+      <rect width="24" height="17" rx="4.5" fill="#FF0033" />
+      <path d="M10 4.8L16.2 8.5L10 12.2V4.8Z" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
+function LeetCodeIcon() {
+  return (
+    <svg width="17" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M13.5 3.6L6.6 10.5C5.2 11.9 5.2 14.1 6.6 15.5L10.2 19.1"
+        stroke="#C5C8D4"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.4 8.3C14.7 6.6 11.9 6.6 10.2 8.3L8.2 10.3C6.5 12 6.5 14.8 8.2 16.5L10.2 18.5C11.9 20.2 14.7 20.2 16.4 18.5"
+        stroke="#FFA116"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12.2 13.4H19.5"
+        stroke="#3B82F6"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function TufIcon() {
+  return (
+    <svg width="21" height="16" viewBox="0 0 26 20" fill="none" aria-hidden="true">
+      <path
+        d="M15.8 3H11.5C9.4 3 8.1 4.2 7.6 6.4L5.2 17H8.8L9.8 12.1H14.1L14.7 9.2H10.4L10.9 7C11.1 6.1 11.6 5.8 12.5 5.8H15.2L15.8 3Z"
+        fill="#FFFFFF"
+      />
+      <path
+        d="M17.2 3H20.8L24.5 10L19.5 17H15.8L20.7 10L17.2 3Z"
+        fill="#3B82F6"
+      />
+    </svg>
+  );
+}
+
 function TaskRow({ question, completed, revision, noteOpen, onComplete, onRevision, onNoteToggle, onSaveNote, plan }) {
   const [draft, setDraft] = useState(plan.notes?.[question.taskId] || '');
   useEffect(() => setDraft(plan.notes?.[question.taskId] || ''), [plan.notes, question.taskId]);
   const isTheory = question.contentType === 'Theory' || question.type === 'theory';
+  const hasNote = Boolean((plan.notes?.[question.taskId] || '').trim());
   const tufUrl = plan?.sheetType === 'striverA2Z'
     ? 'https://takeuforward.org/prep-hub/strivers-a2z-dsa-sheet'
     : (question.tufSheetUrl || 'https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns');
+  const ytUrl = question.youtubeUrl || null;
+  const lcUrl = question.leetcodeUrl || null;
 
   return (
     <div className={`task-wrap ${completed ? 'task-complete' : ''}`}>
@@ -1630,9 +1893,77 @@ function TaskRow({ question, completed, revision, noteOpen, onComplete, onRevisi
           </small>
         </div>
         <div className="task-actions">
-          <button className={revision ? 'active-icon' : ''} onClick={onRevision} title="Add to revision list">☆</button>
-          <button onClick={onNoteToggle} title="Personal notes">▤</button>
-          <a href={tufUrl} target="_blank" rel="noreferrer" title="Open TUF">Open TUF ↗</a>
+          <button
+            type="button"
+            className={`action-btn ${revision ? 'active-icon' : ''}`}
+            onClick={onRevision}
+            title={revision ? 'Remove from revision list' : 'Add to revision list'}
+            aria-label={revision ? 'Remove from revision list' : 'Add to revision list'}
+            aria-pressed={Boolean(revision)}
+          >
+            {revision ? '★' : '☆'}
+          </button>
+          <button
+            type="button"
+            className={`action-btn ${hasNote || noteOpen ? 'has-note' : ''}`}
+            onClick={onNoteToggle}
+            title="Personal notes"
+            aria-label="Personal notes"
+          >
+            ▤
+          </button>
+          {ytUrl ? (
+            <a
+              href={ytUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="action-icon-link"
+              title="Watch Striver video on YouTube"
+              aria-label="Watch on YouTube"
+            >
+              <YouTubeIcon />
+            </a>
+          ) : (
+            <span
+              className="action-icon-disabled"
+              data-tooltip="Not available"
+              title="Not available"
+              aria-disabled="true"
+            >
+              <YouTubeIcon />
+            </span>
+          )}
+          {lcUrl ? (
+            <a
+              href={lcUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="action-icon-link"
+              title="Solve on LeetCode"
+              aria-label="Solve on LeetCode"
+            >
+              <LeetCodeIcon />
+            </a>
+          ) : (
+            <span
+              className="action-icon-disabled"
+              data-tooltip="Not available"
+              title="Not available"
+              aria-disabled="true"
+            >
+              <LeetCodeIcon />
+            </span>
+          )}
+          <a
+            href={tufUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="action-icon-link"
+            title="Open on takeUforward"
+            aria-label="Open on takeUforward"
+          >
+            <TufIcon />
+          </a>
         </div>
       </div>
       {noteOpen && (
@@ -1645,4 +1976,33 @@ function TaskRow({ question, completed, revision, noteOpen, onComplete, onRevisi
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+  render() {
+    if (this.state.error) {
+      return (
+        <div className="loading-screen welcome-screen" style={{ padding: 24 }}>
+          <div className="brand-mark">P</div>
+          <h2>Something went wrong</h2>
+          <p style={{ maxWidth: 420 }}>{this.state.error?.message || 'Unexpected rendering error.'}</p>
+          <button className="button primary" onClick={() => window.location.reload()}>
+            Reload Planli
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+createRoot(document.getElementById('root')).render(
+  <ErrorBoundary>
+    <App />
+  </ErrorBoundary>
+);

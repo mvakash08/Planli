@@ -89,3 +89,18 @@ test('two-hour original availability reproduces supplied six-sprint baseline', (
     }
   }
 });
+
+test('enriched LeetCode and YouTube URLs follow strict validation rules', () => {
+  for (const dataset of [master.questions, striverA2Z.questions]) {
+    for (const q of dataset) {
+      assert.ok('leetcodeUrl' in q && 'youtubeUrl' in q);
+      if (q.leetcodeUrl !== null) {
+        assert.match(q.leetcodeUrl, /^https:\/\/leetcode\.com\/problems\/[a-z0-9-]+\/$/);
+        assert.notEqual(q.type, 'theory');
+      }
+      if (q.youtubeUrl !== null) {
+        assert.match(q.youtubeUrl, /^https:\/\/(www\.youtube\.com\/watch\?v=|youtu\.be\/)/);
+      }
+    }
+  }
+});

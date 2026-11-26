@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Planli — Product & Feature Showcase</title>
+<style>
+  @page { margin: 12mm 15mm; size: A4; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.5;
+    font-size: 10pt;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    font-size: 20pt;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-title h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .brand-title p {
+    font-size: 8.5pt;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+  }
+  .header-links {
+    text-align: right;
+    font-size: 8.5pt;
+    color: #475569;
+  }
+  .header-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .hero-banner {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.25);
+    color: #93c5fd;
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+  .hero-banner h2 {
+    font-size: 14pt;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #f8fafc;
+  }
+  .hero-banner p {
+    font-size: 9pt;
+    color: #cbd5e1;
+    max-width: 90%;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .stat-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .stat-val {
+    font-size: 15pt;
+    font-weight: 800;
+    color: #1d4ed8;
+    display: block;
+    line-height: 1.2;
+  }
+  .stat-label {
+    font-size: 7.5pt;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .section-title {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    border-left: 4px solid #2563eb;
+    padding-left: 8px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .feature-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #ffffff;
+  }
+  .feature-box h3 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .feature-box p {
+    font-size: 8.2pt;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  .dual-sheet-box {
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  .sheet-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .sheet-pill {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .sheet-pill b {
+    font-size: 9pt;
+    color: #0f172a;
+    display: block;
+  }
+  .sheet-pill span {
+    font-size: 8pt;
+    color: #2563eb;
+    font-weight: 600;
+  }
+  .sheet-pill p {
+    font-size: 7.5pt;
+    color: #64748b;
+    margin-top: 3px;
+  }
+
+  .page-break {
+    page-break-after: always;
+    break-after: always;
+  }
+
+  .video-script-box {
+    background: #faf5ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 14px;
+  }
+  .video-script-box h3 {
+    font-size: 10.5pt;
+    color: #6b21a8;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .scene-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+  }
+  .scene-table th {
+    background: #f3e8ff;
+    color: #581c87;
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid #d8b4fe;
+  }
+  .scene-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #f3e8ff;
+    vertical-align: top;
+  }
+  .scene-num {
+    font-weight: 700;
+    color: #7e22ce;
+    width: 60px;
+  }
+
+  .footer {
+    margin-top: 24px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    color: #94a3b8;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">
+      <div class="brand-logo">P</div>
+      <div class="brand-title">
+        <h1>Planli</h1>
+        <p>Intelligent DSA Study Planner</p>
+      </div>
+    </div>
+    <div class="header-links">
+      <div>Live Web App: <a href="https://planli-study.web.app" target="_blank">planli-study.web.app</a></div>
+      <div>GitHub Repo: <a href="https://github.com/mvakash08/Planli" target="_blank">github.com/mvakash08/Planli</a></div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-banner">
+    <span class="hero-tag">Product Overview & Showcase</span>
+    <h2>The Smart, Adaptive Study Roadmap for DSA Aspirants</h2>
+    <p>
+      Most engineers abandon static DSA spreadsheets because life happens. Planli eliminates rigid planning by dynamically grouping problems into weekly milestone sprints, accommodating day-offs, and shifting pending questions forward in real time.
+    </p>
+  </div>
+
+  <!-- METRICS -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-val">675+</span>
+      <span class="stat-label">Total Curated Problems</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-val">7-Day</span>
+      <span class="stat-label">Milestone Sprints</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-val">100%</span>
+      <span class="stat-label">Free & Local First</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-val">Multi-Device</span>
+      <span class="stat-label">Cloud Sync</span>
+    </div>
+  </div>
+
+  <!-- DUAL CURRICULUM -->
+  <div class="section-title">Dual Curriculum Support</div>
+  <div class="dual-sheet-box">
+    <p style="font-size: 8.5pt; color: #334155; font-weight: 500;">
+      Students can switch between, customize, and maintain multiple concurrent roadmaps:
+    </p>
+    <div class="sheet-row">
+      <div class="sheet-pill">
+        <b>⚡ Striver 180 Sheet</b>
+        <span>179 Problems · 3,938 Est. Minutes</span>
+        <p>Curated SDE Sheet targeting high-frequency interview patterns and core algorithmic templates.</p>
+      </div>
+      <div class="sheet-pill">
+        <b>📚 Striver A-Z DSA Course</b>
+        <span>496 Problems · 11,518 Est. Minutes</span>
+        <p>End-to-end master curriculum covering basics, arrays, dynamic programming, trees, and advanced graphs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE CAPABILITIES -->
+  <div class="section-title">Core Engine & Product Features</div>
+  <div class="features-grid">
+    <div class="feature-box">
+      <h3>📅 Dynamic Sprint Scheduling</h3>
+      <p>Enter your daily study capacity (e.g. 1.5h, 2.2h, 3h). Planli automatically partitions the curriculum into balanced 7-day sprints, predicting your target completion date accurately.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🏖️ Adaptive Day-Offs & Pauses</h3>
+      <p>Taking a break or feeling unwell? Mark rest days and the engine automatically pushes pending work forward without splitting problems or disrupting already-completed tasks.</p>
+    </div>
+    <div class="feature-box">
+      <h3>☁️ Real-Time Cloud Sync</h3>
+      <p>Built on Google Cloud Firestore with IndexedDB offline fallback. Your progress, notes, and schedules sync instantly across your laptop, iPad, and mobile phone.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🔐 Frictionless Multi-Mode Auth</h3>
+      <p>Sign in instantly with 1-click Google OAuth, Username/Email & Password, or verified phone options with zero friction.</p>
+    </div>
+    <div class="feature-box">
+      <h3>📝 Problem Notes & Revision Bookmarks</h3>
+      <p>Attach custom approach notes, time complexity breakdowns, and bookmark difficult problems for spaced repetition review.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🎨 Minimalist Dark-Mode UI</h3>
+      <p>Designed for prolonged study sessions with distraction-free typography, quick question filtering, and direct links to takeUforward practice pages.</p>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- AI PROMPT & SCRIPT FOR YOUTUBE PROMO VIDEO -->
+  <div class="section-title">AI Video Generation Script & Prompt (For InVideo / Runway / Sora)</div>
+  <div class="video-script-box">
+    <h3>🎬 Ready-to-Generate Video Script (60-Second Short / Promo)</h3>
+    <p style="font-size: 8pt; color: #4b5563; margin-bottom: 10px;">
+      <b>Prompt to copy into AI Video Generator:</b> <i>"Create a sleek, fast-paced tech showcase video with dynamic screen transitions, modern lo-fi tech background music, and professional voiceover explaining why static DSA sheets fail and how Planli solves it."</i>
+    </p>
+
+    <table class="scene-table">
+      <thead>
+        <tr>
+          <th style="width: 50px;">Scene</th>
+          <th style="width: 140px;">Visual Cues</th>
+          <th>Voiceover Script</th>
+          <th style="width: 130px;">On-Screen Text</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="scene-num">01 (0-10s)</td>
+          <td>Messy Excel sheet with red missed checkboxes, frustrated student at laptop.</td>
+          <td>"Ever started a 180-day DSA sheet, missed three days, and felt like your entire roadmap was ruined?"</td>
+          <td><b>Why Static Sheets Fail ❌</b></td>
+        </tr>
+        <tr>
+          <td class="scene-num">02 (10-22s)</td>
+          <td>Planli app opening. Selecting Striver 180 vs Striver A-Z (496 questions).</td>
+          <td>"Meet Planli — the intelligent DSA study planner that adapts to your life instead of giving you burnout."</td>
+          <td><b>Planli: Dual Sheet Engine ⚡</b></td>
+        </tr>
+        <tr>
+          <td class="scene-num">03 (22-34s)</td>
+          <td>Slider adjusting from 1.5h to 2.5h/day. Sprints re-calculating instantly.</td>
+          <td>"Set your daily commitment, and Planli builds balanced 7-day milestone sprints, predicting your exact finish date."</td>
+          <td><b>Dynamic Sprints & Finish Date 📅</b></td>
+        </tr>
+        <tr>
+          <td class="scene-num">04 (34-44s)</td>
+          <td>User marking Saturday as Day Off; pending problems shift to Sunday automatically.</td>
+          <td>"Taking a day off? Planli shifts your pending questions forward automatically without breaking your streak."</td>
+          <td><b>Zero-Guilt Rest Days 🏖️</b></td>
+        </tr>
+        <tr>
+          <td class="scene-num">05 (44-52s)</td>
+          <td>Phone, tablet, and laptop syncing checked-off questions simultaneously.</td>
+          <td>"Multi-device cloud sync, notes, revision bookmarks, and 100% free forever."</td>
+          <td><b>Sync Everywhere · 100% Free ☁️</b></td>
+        </tr>
+        <tr>
+          <td class="scene-num">06 (52-60s)</td>
+          <td>Planli logo with blue glowing background and clean URL pill.</td>
+          <td>"Stop following rigid spreadsheets. Start planning intelligently at planli-study.web.app."</td>
+          <td><b>Try Planli Today 🚀<br>planli-study.web.app</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>Planli Study Planner · Built by Akash MV · Open Source MIT License</div>
+    <div>Live URL: https://planli-study.web.app · GitHub: https://github.com/mvakash08/Planli</div>
+  </div>
+
+</body>
+</html>

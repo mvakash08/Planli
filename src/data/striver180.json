@@ -561,7 +561,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/majority-element/",
+      "youtubeUrl": "https://youtu.be/nP_ns3uSh80"
     },
     {
       "sequence": 2,
@@ -576,7 +578,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-subarray/",
+      "youtubeUrl": "https://youtu.be/AHZpyENo7k4"
     },
     {
       "sequence": 3,
@@ -591,7 +595,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/majority-element-ii/",
+      "youtubeUrl": "https://youtu.be/vwZj1K0e9U8"
     },
     {
       "sequence": 4,
@@ -606,7 +612,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-product-subarray/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=hnswaLJvr6g"
     },
     {
       "sequence": 5,
@@ -621,7 +629,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/sort-colors/",
+      "youtubeUrl": "https://youtu.be/tp8JIuCXBaU"
     },
     {
       "sequence": 6,
@@ -636,7 +646,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/3sum/",
+      "youtubeUrl": "https://youtu.be/DhFh8Kw7ymk"
     },
     {
       "sequence": 7,
@@ -651,7 +663,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/next-permutation/",
+      "youtubeUrl": "https://youtu.be/JDOXKqF60RQ"
     },
     {
       "sequence": 8,
@@ -666,7 +680,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/4sum/",
+      "youtubeUrl": "https://youtu.be/eD95WRfh81c"
     },
     {
       "sequence": 9,
@@ -681,7 +697,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/merge-sorted-array/",
+      "youtubeUrl": "https://youtu.be/n7uwj04E0I4"
     },
     {
       "sequence": 10,
@@ -696,7 +714,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/trapping-rain-water/",
+      "youtubeUrl": "https://youtu.be/1_5VuquLbXg?si=NFG6df318_6OtGvg"
     },
     {
       "sequence": 11,
@@ -711,7 +731,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/AseUmwVNaoY"
     },
     {
       "sequence": 12,
@@ -726,7 +748,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/reverse-pairs/",
+      "youtubeUrl": "https://youtu.be/0e4bZaP3MDI"
     },
     {
       "sequence": 13,
@@ -741,7 +765,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/two-sum/",
+      "youtubeUrl": "https://youtu.be/UXDSeD9mN-k"
     },
     {
       "sequence": 14,
@@ -756,7 +782,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-consecutive-sequence/",
+      "youtubeUrl": "https://youtu.be/oO5uLE7EUlM"
     },
     {
       "sequence": 15,
@@ -771,7 +799,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/frf7qxiN2qU"
     },
     {
       "sequence": 16,
@@ -786,7 +816,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=xvNwoz-ufXA&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=32"
     },
     {
       "sequence": 17,
@@ -801,7 +833,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/eZr-6p0B7ME"
     },
     {
       "sequence": 18,
@@ -816,7 +850,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/find-peak-element/",
+      "youtubeUrl": "https://youtu.be/cXxmbemS6XM"
     },
     {
       "sequence": 19,
@@ -831,7 +867,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      "youtubeUrl": "https://youtu.be/nhEMDKMB44g"
     },
     {
       "sequence": 20,
@@ -846,7 +884,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
+      "youtubeUrl": "https://youtu.be/w2G2W8l__pc"
     },
     {
       "sequence": 21,
@@ -861,7 +901,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+      "youtubeUrl": "https://youtu.be/AZOmHuHadxQ"
     },
     {
       "sequence": 22,
@@ -876,7 +918,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+      "youtubeUrl": "https://youtu.be/9ZbB397jU4k"
     },
     {
       "sequence": 23,
@@ -891,7 +935,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/find-a-peak-element-ii/",
+      "youtubeUrl": "https://youtu.be/nGGp5XBzC4g?si=WCop5C6Azj5gAELH"
     },
     {
       "sequence": 24,
@@ -906,7 +952,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=WjpswYrS2nY&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=62"
     },
     {
       "sequence": 25,
@@ -921,7 +969,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/koko-eating-bananas/",
+      "youtubeUrl": "https://youtu.be/qyfekrNni90"
     },
     {
       "sequence": 26,
@@ -936,7 +986,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/R_Mfw4ew-Vo"
     },
     {
       "sequence": 27,
@@ -951,7 +1003,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/split-array-largest-sum/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=gYmWHvRHu-s&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=69"
     },
     {
       "sequence": 28,
@@ -966,7 +1020,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/Q9wXgdxJq48?si=ScI_0uzJh7yg8nrX"
     },
     {
       "sequence": 29,
@@ -981,7 +1037,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=nv7F4PiLUzo&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=66"
     },
     {
       "sequence": 30,
@@ -996,7 +1054,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=NTop3VTjmxk&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=65"
     },
     {
       "sequence": 31,
@@ -1011,7 +1071,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "youtubeUrl": "https://youtu.be/-zSxTJkcdAo?si=I2zfR-vlDMg0zU9z"
     },
     {
       "sequence": 32,
@@ -1026,7 +1088,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+      "youtubeUrl": "https://youtu.be/pBWCOCS636U?si=-X64rY67noxvOwrG"
     },
     {
       "sequence": 33,
@@ -1041,7 +1105,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+      "youtubeUrl": "https://youtu.be/3E4JBHSLpYk?si=SoOW64pP6otEKxBw"
     },
     {
       "sequence": 34,
@@ -1056,7 +1122,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+      "youtubeUrl": "https://youtu.be/_eNhaDCr6P0?si=pBWcEjozF5poom0p"
     },
     {
       "sequence": 35,
@@ -1071,7 +1139,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/teM9ZsVRQyc?si=Kh0_u6aCkkBU3Q33"
     },
     {
       "sequence": 36,
@@ -1086,7 +1156,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-window-substring/",
+      "youtubeUrl": "https://youtu.be/WJaij9ffOIY?si=-xnsWIH84zWU0ICd"
     },
     {
       "sequence": 37,
@@ -1101,7 +1173,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
+      "youtubeUrl": "https://youtu.be/xtqN4qlgr8s?si=kuaLHVOLXhh5Z2tW"
     },
     {
       "sequence": 38,
@@ -1116,7 +1190,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/binary-subarrays-with-sum/",
+      "youtubeUrl": "https://youtu.be/XnMdNUkX6VM?si=Nyt8EveeLUg8lmty"
     },
     {
       "sequence": 39,
@@ -1131,7 +1207,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+      "youtubeUrl": "https://youtu.be/j_QOv9OT9Og?si=Oq5-5hyFkzVSOZpP"
     },
     {
       "sequence": 40,
@@ -1146,7 +1224,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/subsets/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=b7AYbpM5YrE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=67"
     },
     {
       "sequence": 41,
@@ -1161,7 +1241,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/generate-parentheses/",
+      "youtubeUrl": null
     },
     {
       "sequence": 42,
@@ -1176,7 +1258,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+      "youtubeUrl": null
     },
     {
       "sequence": 43,
@@ -1191,7 +1275,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/combination-sum/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=OyZFFqQtu98&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=49"
     },
     {
       "sequence": 44,
@@ -1206,7 +1292,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/combination-sum-ii/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=G1fRTGRxXU8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=50"
     },
     {
       "sequence": 45,
@@ -1221,7 +1309,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/subsets-ii/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=RIn3gOkbhQE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=53"
     },
     {
       "sequence": 46,
@@ -1236,7 +1326,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/palindrome-partitioning/",
+      "youtubeUrl": "https://youtu.be/_H8V5hJUGd0"
     },
     {
       "sequence": 47,
@@ -1251,7 +1343,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/word-search/",
+      "youtubeUrl": null
     },
     {
       "sequence": 48,
@@ -1266,7 +1360,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/n-queens/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=i05Ju7AftcM&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=57"
     },
     {
       "sequence": 49,
@@ -1281,7 +1377,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/sudoku-solver/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=FWAIf_EVUKE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=58"
     },
     {
       "sequence": 50,
@@ -1296,7 +1394,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/middle-of-the-linked-list/",
+      "youtubeUrl": "https://youtu.be/7LjQ57RqgEc?si=ir_rRDio38rhamU_"
     },
     {
       "sequence": 51,
@@ -1311,7 +1411,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+      "youtubeUrl": "https://youtu.be/0DYoPz2Tpt4?si=L-uJs5yXUxj4VJM2"
     },
     {
       "sequence": 52,
@@ -1326,7 +1428,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/palindrome-linked-list/",
+      "youtubeUrl": "https://youtu.be/lRY_G-u_8jk?si=BpM8hRYvXSYyjl-G"
     },
     {
       "sequence": 53,
@@ -1341,7 +1445,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle/",
+      "youtubeUrl": "https://youtu.be/wiOo4DC5GGA?si=zagt6O6tFXc4_3cx"
     },
     {
       "sequence": 54,
@@ -1356,7 +1462,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "youtubeUrl": "https://youtu.be/3kMKYQ2wNIU?si=DtFDnPU7z9HMz_GM"
     },
     {
       "sequence": 55,
@@ -1371,7 +1479,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/linked-list-cycle-ii/",
+      "youtubeUrl": "https://youtu.be/2Kd0KKmmHFc?si=7UreDPRjRvapeVB0"
     },
     {
       "sequence": 56,
@@ -1386,7 +1496,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/I4g1qbkTPus?si=ONktpqewvx57T8pF"
     },
     {
       "sequence": 57,
@@ -1401,7 +1513,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/reverse-linked-list/",
+      "youtubeUrl": "https://youtu.be/D2vI2DNJGd8?si=RCaLSx01qR21IBdh"
     },
     {
       "sequence": 58,
@@ -1416,7 +1530,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Xb4slcp1U38&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=29"
     },
     {
       "sequence": 59,
@@ -1431,7 +1547,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/gRII7LhdJWc?si=l3qRC7w3NhY7OAqw"
     },
     {
       "sequence": 60,
@@ -1446,7 +1564,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/add-two-numbers/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=LBVsXSMOIk4&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=32"
     },
     {
       "sequence": 61,
@@ -1461,7 +1581,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/rotate-list/",
+      "youtubeUrl": "https://youtu.be/uT7YI7XbTY8?si=ZaChW3a68c_v54Is"
     },
     {
       "sequence": 62,
@@ -1476,7 +1598,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/sort-list/",
+      "youtubeUrl": "https://youtu.be/8ocB7a_c-Cc?si=Gv-Y8q8-WyARoV35"
     },
     {
       "sequence": 63,
@@ -1491,7 +1615,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+      "youtubeUrl": "https://youtu.be/q570bKdrnlw?si=epZtpWvtNwuTf23o"
     },
     {
       "sequence": 64,
@@ -1506,7 +1632,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+      "youtubeUrl": "https://youtu.be/lIar1skcQYI?si=_jFghHKX4eaK36a1"
     },
     {
       "sequence": 65,
@@ -1521,7 +1649,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/merge-k-sorted-lists/",
+      "youtubeUrl": "https://youtu.be/ykelywHJWLg?si=InMg9MmTHzY22NSR"
     },
     {
       "sequence": 66,
@@ -1536,7 +1666,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/next-greater-element-i/",
+      "youtubeUrl": "https://youtu.be/e7XQLtOQM3I?si=QdcHpTtx6gAHsext"
     },
     {
       "sequence": 67,
@@ -1551,7 +1683,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/next-greater-element-ii/",
+      "youtubeUrl": "https://youtu.be/7PrncD7v9YQ?si=UkBc7eVy9HGlBpeW"
     },
     {
       "sequence": 68,
@@ -1566,7 +1700,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/online-stock-span/",
+      "youtubeUrl": "https://youtu.be/eay-zoSRkVc?si=deNNe5i38BOAntha"
     },
     {
       "sequence": 69,
@@ -1581,7 +1717,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/sum-of-subarray-minimums/",
+      "youtubeUrl": "https://youtu.be/v0e8p9JCgRc?si=XAU7ekECgS5nboRw"
     },
     {
       "sequence": 70,
@@ -1596,7 +1734,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/sum-of-subarray-ranges/",
+      "youtubeUrl": "https://youtu.be/gIrMptNPf5M?si=Q_GHuBvzZVs27X_U"
     },
     {
       "sequence": 71,
@@ -1611,7 +1751,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/remove-k-digits/",
+      "youtubeUrl": "https://youtu.be/jmbuRzYPGrg?si=WN387gwQ7aXWkUao"
     },
     {
       "sequence": 72,
@@ -1626,7 +1768,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+      "youtubeUrl": "https://youtu.be/NwBvene4Imo?si=eU1PY-bcQfk5wdog"
     },
     {
       "sequence": 73,
@@ -1641,7 +1785,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+      "youtubeUrl": "https://youtu.be/Bzat9vgD0fs?si=DiBlLejXcr6EJoyB"
     },
     {
       "sequence": 74,
@@ -1656,7 +1802,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximal-rectangle/",
+      "youtubeUrl": "https://youtu.be/tOylVCugy9k"
     },
     {
       "sequence": 75,
@@ -1671,7 +1819,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/min-stack/",
+      "youtubeUrl": "https://youtu.be/NdDIaH91P0g?si=4_Jbsq5trFvfSdUY"
     },
     {
       "sequence": 76,
@@ -1686,7 +1836,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/asteroid-collision/",
+      "youtubeUrl": "https://youtu.be/_eYGqw_VDR4?si=YyxibcHq800RqgIQ"
     },
     {
       "sequence": 77,
@@ -1701,7 +1853,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/cEadsbTeze4?si=olXYfOs7l-SEn2zl"
     },
     {
       "sequence": 78,
@@ -1716,7 +1870,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/lru-cache/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=z9bJUPxzFOw"
     },
     {
       "sequence": 79,
@@ -1731,7 +1887,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/lfu-cache/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=0PSB9y8ehbk&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=79"
     },
     {
       "sequence": 80,
@@ -1746,7 +1904,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/jump-game/",
+      "youtubeUrl": "https://youtu.be/tZAa_jJ3SwQ?si=voKd7n9VTLDRRNzJ"
     },
     {
       "sequence": 81,
@@ -1761,7 +1921,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/valid-parenthesis-string/",
+      "youtubeUrl": "https://youtu.be/cHT6sG_hUZI?si=XRHeyh7jOaLaTy3g"
     },
     {
       "sequence": 82,
@@ -1776,7 +1938,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/candy/",
+      "youtubeUrl": "https://youtu.be/IIqVFvKE6RY?si=EjmuXZJNLQLUkEd7"
     },
     {
       "sequence": 83,
@@ -1791,7 +1955,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/mKfhTotEguk?si=2RELeq18mpmIIN3Q"
     },
     {
       "sequence": 84,
@@ -1806,7 +1972,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/insert-interval/",
+      "youtubeUrl": "https://youtu.be/xxRE-46OCC8?si=a7aPuIw16zDx2lAa"
     },
     {
       "sequence": 85,
@@ -1821,7 +1989,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/non-overlapping-intervals/",
+      "youtubeUrl": "https://youtu.be/HDHQ8lAWakY?si=JVtLqboGdpUTOVjf"
     },
     {
       "sequence": 86,
@@ -1836,7 +2006,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/",
+      "youtubeUrl": "https://youtu.be/AsGzwR_FWok?si=165acXU_dtqOHuo9"
     },
     {
       "sequence": 87,
@@ -1851,7 +2023,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/QbwltemZbRg?si=wvcemJ5BLPlTRmkG"
     },
     {
       "sequence": 88,
@@ -1866,7 +2040,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": null
     },
     {
       "sequence": 89,
@@ -1881,7 +2057,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": null
     },
     {
       "sequence": 90,
@@ -1896,7 +2074,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": null
     },
     {
       "sequence": 91,
@@ -1911,7 +2091,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "youtubeUrl": null
     },
     {
       "sequence": 92,
@@ -1926,7 +2108,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+      "youtubeUrl": null
     },
     {
       "sequence": 93,
@@ -1941,7 +2125,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      "youtubeUrl": "https://youtu.be/EoAsWbO7sqg"
     },
     {
       "sequence": 94,
@@ -1956,7 +2142,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
+      "youtubeUrl": "https://youtu.be/ZbybYvcVLks"
     },
     {
       "sequence": 95,
@@ -1971,7 +2159,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/binary-tree-right-side-view/",
+      "youtubeUrl": "https://youtu.be/KV4mRzTjlAk"
     },
     {
       "sequence": 96,
@@ -1986,7 +2176,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/Et9OCDNvJ78"
     },
     {
       "sequence": 97,
@@ -2001,7 +2193,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/",
+      "youtubeUrl": "https://youtu.be/i9ORlEy6EsI"
     },
     {
       "sequence": 98,
@@ -2016,7 +2210,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/2r5wLmQfD6g"
     },
     {
       "sequence": 99,
@@ -2031,7 +2227,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
+      "youtubeUrl": "https://youtu.be/q_a6lpbKJdw"
     },
     {
       "sequence": 100,
@@ -2046,7 +2244,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/fmflMqVOC7k"
     },
     {
       "sequence": 101,
@@ -2061,7 +2261,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/diameter-of-binary-tree/",
+      "youtubeUrl": "https://youtu.be/Rezetez59Nk"
     },
     {
       "sequence": 102,
@@ -2076,7 +2278,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "youtubeUrl": "https://youtu.be/_-QHfMDde90"
     },
     {
       "sequence": 103,
@@ -2091,7 +2295,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/0ca1nvR0be4"
     },
     {
       "sequence": 104,
@@ -2106,7 +2312,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+      "youtubeUrl": "https://youtu.be/aZNaLrVebKQ"
     },
     {
       "sequence": 105,
@@ -2121,7 +2329,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+      "youtubeUrl": "https://youtu.be/80Zug6D1_r4"
     },
     {
       "sequence": 106,
@@ -2136,7 +2346,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+      "youtubeUrl": "https://youtu.be/WszrfSwMz58"
     },
     {
       "sequence": 107,
@@ -2151,7 +2363,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+      "youtubeUrl": "https://youtu.be/-YbXySKJsX8"
     },
     {
       "sequence": 108,
@@ -2166,7 +2380,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
+      "youtubeUrl": "https://youtu.be/FiFiNvM29ps"
     },
     {
       "sequence": 109,
@@ -2181,7 +2397,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+      "youtubeUrl": "https://youtu.be/cX_kPV_foZc"
     },
     {
       "sequence": 110,
@@ -2196,7 +2414,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/delete-node-in-a-bst/",
+      "youtubeUrl": "https://youtu.be/kouxiP_H5WE"
     },
     {
       "sequence": 111,
@@ -2211,7 +2431,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/SXKAD2svfmI"
     },
     {
       "sequence": 112,
@@ -2226,7 +2448,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+      "youtubeUrl": "https://youtu.be/9TJYWh0adfk"
     },
     {
       "sequence": 113,
@@ -2241,7 +2465,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/validate-binary-search-tree/",
+      "youtubeUrl": "https://youtu.be/f-sj7I5oXEI"
     },
     {
       "sequence": 114,
@@ -2256,7 +2482,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/",
+      "youtubeUrl": "https://youtu.be/UmJT3j26t1I"
     },
     {
       "sequence": 115,
@@ -2271,7 +2499,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+      "youtubeUrl": "https://youtu.be/ssL3sHwPeb4"
     },
     {
       "sequence": 116,
@@ -2286,7 +2516,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/recover-binary-search-tree/",
+      "youtubeUrl": "https://youtu.be/ZWGW7FminDM"
     },
     {
       "sequence": 117,
@@ -2301,7 +2533,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/X0oXMdtUDwo"
     },
     {
       "sequence": 118,
@@ -2316,7 +2550,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/flood-fill/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=C-2_uSRli8o"
     },
     {
       "sequence": 119,
@@ -2331,7 +2567,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/number-of-islands/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=muncqlKJrH0&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=8"
     },
     {
       "sequence": 120,
@@ -2346,7 +2584,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/rotting-oranges/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=yf3oUhkvqA0"
     },
     {
       "sequence": 121,
@@ -2361,7 +2601,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/01-matrix/",
+      "youtubeUrl": "https://youtu.be/edXdVwkYHF8"
     },
     {
       "sequence": 122,
@@ -2376,7 +2618,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/surrounded-regions/",
+      "youtubeUrl": "https://youtu.be/BtdgAys4yMk"
     },
     {
       "sequence": 123,
@@ -2391,7 +2635,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=muncqlKJrH0&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=8"
     },
     {
       "sequence": 124,
@@ -2406,7 +2652,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/course-schedule/",
+      "youtubeUrl": "https://youtu.be/zQ3zgFypzX4"
     },
     {
       "sequence": 125,
@@ -2421,7 +2669,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/is-graph-bipartite/",
+      "youtubeUrl": "https://youtu.be/KG5YFfR0j8A"
     },
     {
       "sequence": 126,
@@ -2436,7 +2686,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/course-schedule/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=uzVUw90ZFIg&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=12"
     },
     {
       "sequence": 127,
@@ -2451,7 +2703,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/5lZ0iJMrUMk"
     },
     {
       "sequence": 128,
@@ -2466,7 +2720,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/course-schedule-ii/",
+      "youtubeUrl": "https://youtu.be/WAOfKpxYHR8"
     },
     {
       "sequence": 129,
@@ -2481,7 +2737,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/U3N_je7tWAs"
     },
     {
       "sequence": 130,
@@ -2496,7 +2754,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=V8qIqJxCioo&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=27"
     },
     {
       "sequence": 131,
@@ -2511,7 +2771,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/critical-connections-in-a-network/",
+      "youtubeUrl": "https://youtu.be/qrAub5z8FeA"
     },
     {
       "sequence": 132,
@@ -2526,7 +2788,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/j1QDfU21iZk"
     },
     {
       "sequence": 133,
@@ -2541,7 +2805,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=C4gxoTaI71U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=28"
     },
     {
       "sequence": 134,
@@ -2556,7 +2822,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=ZUFQfFaU-8U&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=27"
     },
     {
       "sequence": 135,
@@ -2571,7 +2839,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=rp1SMw7HSO8&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=35"
     },
     {
       "sequence": 136,
@@ -2586,7 +2856,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/path-with-minimum-effort/",
+      "youtubeUrl": "https://youtu.be/0ytpZyiZFhA"
     },
     {
       "sequence": 137,
@@ -2601,7 +2873,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+      "youtubeUrl": "https://youtu.be/9XybHVqTHcQ"
     },
     {
       "sequence": 138,
@@ -2616,7 +2890,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/0vVofAhAYjc"
     },
     {
       "sequence": 139,
@@ -2631,7 +2907,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=YbY8cVwWAvw&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=42"
     },
     {
       "sequence": 140,
@@ -2646,7 +2924,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/word-ladder/",
+      "youtubeUrl": "https://youtu.be/tRPda0rcf8E"
     },
     {
       "sequence": 141,
@@ -2661,7 +2941,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/word-ladder-ii/",
+      "youtubeUrl": "https://youtu.be/AD4SFl7tu7I?si=EpcJQTWm2YeURvEG"
     },
     {
       "sequence": 142,
@@ -2676,7 +2958,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/aBxjDBC4M1U"
     },
     {
       "sequence": 143,
@@ -2691,7 +2975,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/mJcZjjKzeqk"
     },
     {
       "sequence": 144,
@@ -2706,7 +2992,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+      "youtubeUrl": "https://youtu.be/FYrl7iz9_ZU"
     },
     {
       "sequence": 145,
@@ -2721,7 +3009,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/Rn6B-Q4SNyA"
     },
     {
       "sequence": 146,
@@ -2736,7 +3026,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/making-a-large-island/",
+      "youtubeUrl": "https://youtu.be/lgiz0Oup6gM"
     },
     {
       "sequence": 147,
@@ -2751,7 +3043,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=Kmh3rhyEtB8"
     },
     {
       "sequence": 148,
@@ -2766,7 +3060,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/house-robber/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=3WaxQMELSkw"
     },
     {
       "sequence": 149,
@@ -2781,7 +3077,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=AE39gJYuRog"
     },
     {
       "sequence": 150,
@@ -2796,7 +3094,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/unique-paths-ii/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=TmhpgXScLyY"
     },
     {
       "sequence": 151,
@@ -2811,7 +3111,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/",
+      "youtubeUrl": "https://youtu.be/k4eK-vEmnKg"
     },
     {
       "sequence": 152,
@@ -2826,7 +3128,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+      "youtubeUrl": "https://youtu.be/IV1dHbk5CDc"
     },
     {
       "sequence": 153,
@@ -2841,7 +3145,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/GqOmJHQZivw"
     },
     {
       "sequence": 154,
@@ -2856,7 +3162,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/last-stone-weight-ii/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=GS_OqZb2CWc"
     },
     {
       "sequence": 155,
@@ -2871,7 +3179,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/target-sum/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=b3GD8263-PQ"
     },
     {
       "sequence": 156,
@@ -2886,7 +3196,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/coin-change-ii/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=HgyouUi11zk"
     },
     {
       "sequence": 157,
@@ -2901,7 +3213,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-common-subsequence/",
+      "youtubeUrl": "https://youtu.be/-zI4mrF2Pb4"
     },
     {
       "sequence": 158,
@@ -2916,7 +3230,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=_wP9mWNPL5w"
     },
     {
       "sequence": 159,
@@ -2931,7 +3247,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+      "youtubeUrl": "https://youtu.be/6i_T5kkfv4A"
     },
     {
       "sequence": 160,
@@ -2946,7 +3264,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "youtubeUrl": "https://youtu.be/on2hvxBXJH4"
     },
     {
       "sequence": 161,
@@ -2961,7 +3281,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/number-of-longest-increasing-subsequence/",
+      "youtubeUrl": "https://youtu.be/cKVl1TFdNXg"
     },
     {
       "sequence": 162,
@@ -2976,7 +3298,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/edit-distance/",
+      "youtubeUrl": "https://youtu.be/fJaKO8FbDdo"
     },
     {
       "sequence": 163,
@@ -2991,7 +3315,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/wildcard-matching/",
+      "youtubeUrl": "https://youtu.be/ZmlQ3vgAOMo"
     },
     {
       "sequence": 164,
@@ -3006,7 +3332,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=vRVfmbCFW7Y"
     },
     {
       "sequence": 165,
@@ -3021,7 +3349,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+      "youtubeUrl": "https://youtu.be/_H8V5hJUGd0"
     },
     {
       "sequence": 166,
@@ -3036,7 +3366,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=K5pcpkEMCN0"
     },
     {
       "sequence": 167,
@@ -3051,7 +3383,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=AWnBa91lThI&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=3"
     },
     {
       "sequence": 168,
@@ -3066,7 +3400,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=RV0QeTyHZxo"
     },
     {
       "sequence": 169,
@@ -3081,7 +3417,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=EIhAwfHubE8&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=6"
     },
     {
       "sequence": 170,
@@ -3096,7 +3434,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Q8LhG9Pi5KM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=7"
     },
     {
       "sequence": 171,
@@ -3111,7 +3451,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/repeated-string-match/",
+      "youtubeUrl": null
     },
     {
       "sequence": 172,
@@ -3126,7 +3468,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": null
     },
     {
       "sequence": 173,
@@ -3141,7 +3485,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "youtubeUrl": null
     },
     {
       "sequence": 174,
@@ -3156,7 +3502,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/shortest-palindrome/",
+      "youtubeUrl": null
     },
     {
       "sequence": 175,
@@ -3171,7 +3519,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/subsets/",
+      "youtubeUrl": "https://youtu.be/LqKaUv1G3_I?si=UXU_T5OsHiokPRvP"
     },
     {
       "sequence": 176,
@@ -3186,7 +3536,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/single-number-ii/",
+      "youtubeUrl": null
     },
     {
       "sequence": 177,
@@ -3201,7 +3553,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": "https://leetcode.com/problems/single-number-iii/",
+      "youtubeUrl": "https://youtu.be/UA5JnV1J2sI?si=VFBRJyb3boZvx_r1"
     },
     {
       "sequence": 178,
@@ -3216,7 +3570,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://youtu.be/2D0D8HE6uak"
     },
     {
       "sequence": 179,
@@ -3231,7 +3587,9 @@
       "topic": null,
       "subtopic": null,
       "tufSectionOpenIds": [],
-      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns"
+      "tufSheetUrl": "https://takeuforward.org/prep-hub/strivers-180-master-dsa-patterns",
+      "leetcodeUrl": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=1xNbjMdbjug"
     }
   ]
 }
